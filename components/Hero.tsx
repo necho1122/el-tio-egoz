@@ -22,7 +22,7 @@ export default function Hero() {
 						Descubre los juegos más atrevidos e intensos
 					</h1>
 					<p className='text-base sm:text-lg md:text-2xl xl:text-3xl max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto drop-shadow-md'>
-						Explora títulos para PC y Android que van más allá de lo
+						Explora títulos para PC, iOS y Android que van más allá de lo
 						convencional.
 						<br />
 						¡Actualizaciones frecuentes, sin filtros!

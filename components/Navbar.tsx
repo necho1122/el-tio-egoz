@@ -32,7 +32,7 @@ function Navbar() {
 							className='rounded-full sm:w-10 sm:h-10 w-8 h-8'
 						/>
 						<span className='sm:text-2xl text-lg font-semibold'>
-							<span className='sm:inline hidden text-nowrap'>El Tio Egoz</span>
+							<span className='sm:inline hidden text-nowrap'>El Tío Egoz</span>
 							<span className='inline sm:hidden text-nowrap'>Tío Egoz</span>
 						</span>
 					</a>
