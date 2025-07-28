@@ -1,8 +1,11 @@
+import Dashboard from '@/components/Dashboard';
+import Hero from '@/components/Hero';
 
 export default function Home() {
 	return (
 		<div>
-			<h1>Página para un chamo adechisimo...</h1>
+			<Hero />
+			<Dashboard />
 		</div>
 	);
 }
