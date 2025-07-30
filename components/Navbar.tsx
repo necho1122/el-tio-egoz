@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,8 @@ function Navbar() {
 		<div className='w-full bg-card'>
 			<nav className='flex flex-row justify-between items-center px-4 py-2'>
 				<div className=''>
-					<a
-						href='index.html'
+					<Link
+						href='/'
 						className='flex items-center gap-2 text-white'
 					>
 						<Image
@@ -35,7 +36,7 @@ function Navbar() {
 							<span className='sm:inline hidden text-nowrap'>El Tío Egoz</span>
 							<span className='inline sm:hidden text-nowrap'>Tío Egoz</span>
 						</span>
-					</a>
+					</Link>
 				</div>
 
 				{/* Search bar */}
@@ -56,20 +57,20 @@ function Navbar() {
 				{/* Menú horizontal en desktop */}
 				<ul className='hidden lg:flex flex-row gap-6 items-center text-white ml-4'>
 					<li>
-						<a
-							href='../../index.html'
+						<Link
+							href='/'
 							className='hover:underline'
 						>
 							Inicio
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
+						<Link
 							href='#'
 							className='hover:underline'
 						>
 							Nosotros
-						</a>
+						</Link>
 					</li>
 					<li>
 						<a
@@ -82,12 +83,12 @@ function Navbar() {
 						</a>
 					</li>
 					<li>
-						<a
+						<Link
 							href='#'
 							className='hover:underline'
 						>
 							Contáctanos
-						</a>
+						</Link>
 					</li>
 				</ul>
 
@@ -134,22 +135,38 @@ function Navbar() {
 					</button>
 					<ul className='space-y-4 mt-10'>
 						<li>
-							<a href='../../index.html'>Inicio</a>
+							<Link
+								href='/'
+								className='hover:underline'
+							>
+								Inicio
+							</Link>
 						</li>
 						<li>
-							<a href='#'>Nosotros</a>
+							<Link
+								href='#'
+								className='hover:underline'
+							>
+								Nosotros
+							</Link>
 						</li>
 						<li>
 							<a
 								href='https://directorio-de-enlaces-nuevo-v3.netlify.app/'
 								target='_blank'
 								rel='noopener noreferrer'
+								className='hover:underline'
 							>
 								Redes
 							</a>
 						</li>
 						<li>
-							<a href='#'>Contáctanos</a>
+							<Link
+								href='#'
+								className='hover:underline'
+							>
+								Contáctanos
+							</Link>
 						</li>
 					</ul>
 				</aside>

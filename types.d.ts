@@ -1,0 +1,12 @@
+export type Item = {
+	id: string;
+	title: string;
+	description: string;
+	images: string[];
+	createdAt: number;
+	likes: number;
+	basicInfomation?: string[];
+	details?: string[];
+	platforms?: string[];
+	downloadLink?: string[];
+};
