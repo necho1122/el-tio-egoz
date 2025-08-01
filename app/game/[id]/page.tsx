@@ -87,23 +87,33 @@ const GameDetails = () => {
 					</div>
 				)}
 				{/* Plataformas */}
-				{item.platforms && (
-					<div className='mb-4'>
-						<h3 className='text-lg font-semibold text-foreground mb-2'>
-							Plataformas Disponibles
-						</h3>
-						<div className='flex flex-wrap gap-2'>
-							{item.platforms.map((platform, index) => (
-								<span
-									key={index}
-									className='bg-link text-white px-3 py-1 rounded-full text-xs font-semibold shadow'
-								>
-									{platform}
-								</span>
-							))}
-						</div>
+				<div className='mb-4'>
+					<h3 className='text-lg font-semibold text-foreground mb-2'>
+						Plataformas Disponibles
+					</h3>
+					<div className='flex flex-wrap gap-2'>
+						{item.linkAndroid && (
+							<div className='bg-link text-footer-text px-3 py-2 rounded-lg text-xs sm:text-sm font-medium shadow flex items-center'>
+								Android
+							</div>
+						)}
+						{item.linkMac && (
+							<div className='bg-link text-footer-text px-3 py-2 rounded-lg text-xs sm:text-sm font-medium shadow flex items-center'>
+								Mac
+							</div>
+						)}
+						{item.linkWindows && (
+							<div className='bg-link text-footer-text px-3 py-2 rounded-lg text-xs sm:text-sm font-medium shadow flex items-center'>
+								Windows
+							</div>
+						)}
+						{item.linkIos && (
+							<div className='bg-link text-footer-text px-3 py-2 rounded-lg text-xs sm:text-sm font-medium shadow flex items-center'>
+								iOS
+							</div>
+						)}
 					</div>
-				)}
+				</div>
 				<hr className='my-4 border-t border-gray-200 dark:border-gray-700' />
 				<h2 className='text-xl font-bold text-heading mb-2'>Descárgalo aquí</h2>
 				<div className='flex flex-row flex-wrap gap-2'>
