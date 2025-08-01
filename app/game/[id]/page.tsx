@@ -105,27 +105,49 @@ const GameDetails = () => {
 					</div>
 				)}
 				<hr className='my-4 border-t border-gray-200 dark:border-gray-700' />
-				{/* Descarga */}
-				{item.downloadLink && (
-					<div className='mb-2'>
-						<h2 className='text-xl font-bold text-heading mb-2'>
-							Descárgalo aquí
-						</h2>
-						<div className='flex gap-2'>
-							{item.downloadLink.map((link, index) => (
-								<a
-									key={index}
-									href={link}
-									className='bg-link hover:bg-link-hover text-white font-semibold px-4 py-2 rounded-lg shadow transition-colors text-center'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Descargar Opción {index + 1}
-								</a>
-							))}
-						</div>
-					</div>
-				)}
+				<h2 className='text-xl font-bold text-heading mb-2'>Descárgalo aquí</h2>
+				<div className='flex flex-row flex-wrap gap-2'>
+					{item.linkAndroid && (
+						<a
+							href={item.linkAndroid}
+							className='bg-link hover:bg-link-hover text-white font-semibold px-4 py-2 rounded-lg shadow transition-colors text-center'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Descargar para Android
+						</a>
+					)}
+					{item.linkMac && (
+						<a
+							href={item.linkMac}
+							className='bg-link hover:bg-link-hover text-white font-semibold px-4 py-2 rounded-lg shadow transition-colors text-center'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Descargar para Mac
+						</a>
+					)}
+					{item.linkWindows && (
+						<a
+							href={item.linkWindows}
+							className='bg-link hover:bg-link-hover text-white font-semibold px-4 py-2 rounded-lg shadow transition-colors text-center'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Descargar para Windows
+						</a>
+					)}
+					{item.linkIos && (
+						<a
+							href={item.linkIos}
+							className='bg-link hover:bg-link-hover text-white font-semibold px-4 py-2 rounded-lg shadow transition-colors text-center'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Descargar para iOS
+						</a>
+					)}
+				</div>
 				{/* Likes y Fecha */}
 				<div className='flex flex-row justify-between items-center mt-6 text-xs text-text-secondary'>
 					<span>👍 {item.likes} Likes</span>

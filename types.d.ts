@@ -8,5 +8,8 @@ export type Item = {
 	basicInfomation?: string[];
 	details?: string[];
 	platforms?: string[];
-	downloadLink?: string[];
+	linkAndroid?: string;
+	linkMac?: string;
+	linkWindows?: string;
+	linkIos?: string;
 };
