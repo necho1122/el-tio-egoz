@@ -22,7 +22,7 @@ export default function AgeModal() {
 	if (!open) return null;
 
 	return (
-		<div className='fixed inset-0 z-[100] flex items-center justify-center bg-black/99'>
+		<div className='fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm'>
 			<div className='bg-card rounded-2xl shadow-2xl p-6 max-w-sm w-full border border-gray-200 dark:border-gray-700 text-center'>
 				<h2 className='text-2xl font-bold text-heading mb-2'>Advertencia</h2>
 				<p className='text-text-secondary mb-6'>
