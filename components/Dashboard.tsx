@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import ImageSlider from '@/components/UI/ImageSlider';
-
+import { useSearch } from '@/context/SearchContext';
 import Link from 'next/link';
 import { Item } from '@/types';
 
 export default function ItemsList() {
 	const [data, setData] = useState<Item[]>([]);
 	const [loading, setLoading] = useState(true);
+	const { query } = useSearch();
 
 	useEffect(() => {
 		async function fetchItems() {
@@ -25,12 +26,16 @@ export default function ItemsList() {
 		fetchItems();
 	}, []);
 
+	const filteredGames = data.filter((game) =>
+		game.title.toLowerCase().includes(query.toLowerCase())
+	);
+
 	if (loading) return <p className='mx-auto text-center'>Cargando...</p>;
 
 	return (
 		<div className='max-w-7xl 2xl:max-w-screen-2xl mx-auto px-1 sm:px-4 py-3 sm:py-6'>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-4 xl:gap-6'>
-				{data.map((item) => (
+				{filteredGames.map((item) => (
 					<div
 						key={item.id}
 						className='bg-card rounded-lg flex flex-col justify-between shadow-lg hover:shadow-xl transform transition-transform duration-300 ease-in-out

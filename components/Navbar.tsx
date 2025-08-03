@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearch } from '@/context/SearchContext';
 
 function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const { query, setQuery } = useSearch();
 
 	// Toggle menu visibility on small screens
 	const toggleMenu = () => {
@@ -41,17 +43,31 @@ function Navbar() {
 
 				{/* Search bar */}
 				<div className='flex items-center justify-center flex-1 mx-2'>
-					<input
-						type='text'
-						placeholder='Buscar juegos...'
-						className='px-2 py-1 rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 text-xs w-32 sm:w-64 sm:px-4 sm:py-2 sm:text-sm'
-					/>
-					<button
-						type='submit'
-						className='bg-btn hover:cursor-pointer hover:bg-btn-hover text-foreground px-3 py-[6px] sm:px-5 sm:py-[10px] rounded-r-md focus:outline-none text-xs sm:text-sm'
-					>
-						Buscar
-					</button>
+					<div className='relative w-full max-w-xs sm:max-w-sm'>
+						<input
+							type='text'
+							placeholder='Buscar juegos...'
+							value={query}
+							onChange={(e) => setQuery(e.target.value)}
+							className='w-full pl-10 pr-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm sm:text-base text-foreground placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-white dark:focus:bg-gray-900 transition duration-200 shadow-sm'
+						/>
+						<span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								strokeWidth={2}
+								stroke='currentColor'
+								className='w-5 h-5'
+							>
+								<path
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									d='M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z'
+								/>
+							</svg>
+						</span>
+					</div>
 				</div>
 
 				{/* Menú horizontal en desktop */}
