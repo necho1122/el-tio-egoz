@@ -5,7 +5,7 @@ export type Item = {
 	images: string[];
 	createdAt: number;
 	likes: number;
-	basicInfomation?: string[];
+	basicInformation?: string[];
 	details?: string[];
 	platforms?: string[];
 	linkAndroid?: string;

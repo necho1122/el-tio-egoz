@@ -51,13 +51,13 @@ const GameDetails = () => {
 					Detalles del juego
 				</h2>
 				{/* Informacion Básica */}
-				{item.basicInfomation && (
+				{item.basicInformation && (
 					<div className='mb-4'>
 						<h3 className='text-lg font-semibold text-foreground mb-2'>
 							Información Básica
 						</h3>
 						<div className='flex flex-wrap gap-2'>
-							{item.basicInfomation.map((info, index) => (
+							{item.basicInformation.map((info, index) => (
 								<div
 									key={index}
 									className='bg-footer-bg text-footer-text px-3 py-2 rounded-lg text-xs sm:text-sm font-medium shadow flex items-center'
