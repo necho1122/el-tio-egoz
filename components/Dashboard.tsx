@@ -6,7 +6,7 @@ import { useSearch } from '@/context/SearchContext';
 import Link from 'next/link';
 import { Item } from '@/types';
 
-export default function ItemsList() {
+export default function Dashboard({ filters }: { filters: { order: string } }) {
 	const [data, setData] = useState<Item[]>([]);
 	const [loading, setLoading] = useState(true);
 	const { query } = useSearch();
@@ -26,9 +26,38 @@ export default function ItemsList() {
 		fetchItems();
 	}, []);
 
-	const filteredGames = data.filter((game) =>
+	// Filtrado por búsqueda
+	let filteredGames = data.filter((game) =>
 		game.title.toLowerCase().includes(query.toLowerCase())
 	);
+
+	// Ordenamiento
+	if (filters?.order) {
+		switch (filters.order) {
+			case 'newest':
+				filteredGames = [...filteredGames].sort(
+					(a, b) =>
+						new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+				);
+				break;
+			case 'oldest':
+				filteredGames = [...filteredGames].sort(
+					(a, b) =>
+						new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+				);
+				break;
+			case 'alphabetical':
+				filteredGames = [...filteredGames].sort((a, b) =>
+					a.title.localeCompare(b.title)
+				);
+				break;
+			case 'likes':
+				filteredGames = [...filteredGames].sort((a, b) => b.likes - a.likes);
+				break;
+			default:
+				break;
+		}
+	}
 
 	if (loading) return <p className='mx-auto text-center'>Cargando...</p>;
 
