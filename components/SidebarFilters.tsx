@@ -25,7 +25,7 @@ export default function SidebarFilters({
 	};
 
 	return (
-		<aside className='w-[240px] bg-[#181c24] rounded-2xl p-6 shadow-lg text-white font-sans'>
+		<aside className='w-full md:mt-6 lg:w-[240px] bg-[#181c24] rounded-2xl p-6 shadow-2xl text-white font-sans mb-4 lg:mb-0'>
 			<h3 className='text-[22px] mb-5 text-[#ffb300] tracking-wider flex items-center'>
 				<span
 					role='img'
