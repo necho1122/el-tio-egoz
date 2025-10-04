@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
 	return (
-		<section className='relative w-full min-h-[320px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden'>
+		<section className='relative w-full min-h-[250px] sm:min-h-[300px] md:min-h-[300px] lg:min-h-[400px] flex items-center justify-center overflow-hidden'>
 			<div className='absolute inset-0 z-0'>
 				<Image
 					src='/images/hero-bg.webp'
