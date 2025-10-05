@@ -85,7 +85,7 @@ function Navbar() {
 							href='#'
 							className='hover:underline'
 						>
-							Nosotros
+							Ayuda
 						</Link>
 					</li>
 					<li>
@@ -99,7 +99,7 @@ function Navbar() {
 					</li>
 					<li>
 						<Link
-							href='#'
+							href='/contact'
 							className='hover:underline'
 						>
 							Contáctanos
