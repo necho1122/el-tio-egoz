@@ -85,13 +85,12 @@ function Navbar() {
 							href='#'
 							className='hover:underline'
 						>
-							Nosotros
+							Ayuda
 						</Link>
 					</li>
 					<li>
 						<a
-							href='https://directorio-de-enlaces-nuevo-v3.netlify.app/'
-							target='_blank'
+							href='/social-networks'
 							rel='noopener noreferrer'
 							className='hover:underline'
 						>
@@ -100,7 +99,7 @@ function Navbar() {
 					</li>
 					<li>
 						<Link
-							href='#'
+							href='/contact'
 							className='hover:underline'
 						>
 							Contáctanos
