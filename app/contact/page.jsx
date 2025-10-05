@@ -45,7 +45,7 @@ const CustomerServiceCard = () => {
 
         {/* Mensaje principal */}
         <p className="text-lg text-gray-700 font-medium mb-6">
-          No me digas... ¿Un link caído? Estoy aquí para ayuda.
+          No me digas... ¿Un link caído? Estoy aquí para ayudar.
         </p>
 
         {/* Botón de Contacto */}
