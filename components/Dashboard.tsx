@@ -68,7 +68,7 @@ export default function Dashboard({ filters }: { filters: { order: string } }) {
 					<div
 						key={item.id}
 						className='bg-card rounded-lg flex flex-col justify-between shadow-lg hover:shadow-xl transform transition-transform duration-300 ease-in-out
-						 hover:scale-[1.03]'
+						hover:scale-[1.03]'
 					>
 						<ImageSlider
 							images={item.images}

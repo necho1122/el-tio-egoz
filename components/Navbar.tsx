@@ -90,8 +90,7 @@ function Navbar() {
 					</li>
 					<li>
 						<a
-							href='https://directorio-de-enlaces-nuevo-v3.netlify.app/'
-							target='_blank'
+							href='/social-networks'
 							rel='noopener noreferrer'
 							className='hover:underline'
 						>
