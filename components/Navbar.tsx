@@ -82,10 +82,10 @@ function Navbar() {
 					</li>
 					<li>
 						<Link
-							href='#'
+							href='/Donate'
 							className='hover:underline'
 						>
-							Ayuda
+							Donar
 						</Link>
 					</li>
 					<li>
